@@ -8,7 +8,8 @@
     "exports": {
         "./*": ["./dist/*"]
     },
-    "module": "./dist/loconative-scroll.esm.js",
+    "module": "./dist/loconative-scroll.js",
+    "main ": "./dist/loconative-scroll.",
     "type": "module",
     "scripts": {
         "start": "gulp",
