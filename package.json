@@ -6,7 +6,7 @@
     "author": "Quentin Hocdé <info@quentinhocde.com> (https://quentinhocde.com)",
     "license": "MIT",
     "exports": {
-        ".": "./dist/"
+        "./*": ["./dist/*"]
     },
     "module": "./dist/loconative-scroll.esm.js",
     "type": "module",
