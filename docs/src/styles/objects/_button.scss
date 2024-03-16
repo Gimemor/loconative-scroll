@@ -1,6 +1,8 @@
 // ==========================================================================
 // Objects / Buttons
 // ==========================================================================
+@use 'sass:math';
+
 .o-button {
     position: relative;
     z-index: 1;
@@ -42,7 +44,7 @@
     vertical-align: middle;
     width: rem(55px);
     height: rem(55px);
-    margin-right: rem($unit / 4);
+    margin-right: rem(math.div($unit, 4));
 
     svg {
         display: block;

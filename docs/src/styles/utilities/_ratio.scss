@@ -8,6 +8,8 @@
 
 // A list of aspect ratios that get generated as modifier classes.
 
+@use "sass:math";
+
 $aspect-ratios: (
     (2:1),
     (4:3),
@@ -33,8 +35,8 @@ $aspect-ratios: (
             @error "`#{$consequent}` needs to be a number."
         }
 
-        &.u-#{$antecedent}\:#{$consequent}::before {
-            padding-bottom: ($consequent/$antecedent) * 100%;
+        .u-#{$antecedent}\:#{$consequent}::before {
+            padding-bottom: math.div($consequent, $antecedent) * 100%;
         }
     }
 }

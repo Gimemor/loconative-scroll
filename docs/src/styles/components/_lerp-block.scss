@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .c-lerp-block {
     font-weight: $bold;
     text-transform: uppercase;
@@ -9,7 +11,7 @@
         }
     }
     @media (max-width: $to-medium) {
-        margin-top: rem($unit/2);
+        margin-top: rem(math.div($unit, 2));
     }
 }
 

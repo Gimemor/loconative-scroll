@@ -5,6 +5,8 @@
 // Context
 // =============================================================================
 // The current stylesheet context. Available values: frontend, editor.
+@use "sass:math";
+
 $context: frontend  !default;
 
 // Path is relative to the stylesheets directory.
@@ -18,7 +20,7 @@ $font-sans-serif: Arial, sans-serif;
 // =============================================================================
 // Base
 $font-size:   16px;
-$line-height: 24px / $font-size;
+$line-height: math.div(24px, $font-size);
 $font-family: $font-sans-serif;
 $color:       #222222;
 // Headings

@@ -10,6 +10,8 @@
 // @param  {Color} $value [rgba(0, 0, 0, 0)] - The value of the highlight.
 // @output `-webkit-tap-highlight-color`
 //
+@use "sass:math";
+
 @mixin tap-highlight-color($value: rgba(0, 0, 0, 0)) {
     -webkit-tap-highlight-color: $value;
 }
@@ -55,13 +57,13 @@
     font-size: rem($font-size) $important;
 
     @if ($line-height == "auto") {
-        line-height: ceil($font-size / $line-height) * ($line-height / $font-size) $important;
+        line-height: ceil(math.div($font-size, $line-height)) * math.div($line-height, $font-size) $important;
     }
     @else {
         @if (type-of($line-height) == number or $line-height == "inherit" or $line-height == "normal") {
             line-height: $line-height $important;
         }
-        @elseif ($line-height != "none" and $line-height != false) {
+        @else if ($line-height != "none" and $line-height != false) {
             @error "D’oh! `#{$line-height}` is not a valid value for `$line-height`."
         }
     }

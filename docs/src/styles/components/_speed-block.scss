@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .c-speed-block {
     position: relative;
 
@@ -8,10 +10,10 @@
     }
 
     @media (max-width: $to-medium) {
-        margin: rem($unit/2) 0;
+        margin: rem(math.div($unit, 2)) 0;
     }
     @media (max-width: $to-small) {
-        margin: $unit/4 0;
+        margin: $unit*0.25 0;
     }
 }
 
@@ -49,7 +51,7 @@
     top: 30%;
     z-index: 1;
     color: $beige;
-    padding: rem($unit/2.5) rem($unit-small);
+    padding: rem(math.div($unit, 2.5)) rem($unit-small);
     font-size: rem(20px);
 
     &.-right {

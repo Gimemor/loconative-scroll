@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .c-summary {
     margin: rem($unit) 0 rem($unit * 2) 0;
 }
@@ -21,7 +23,7 @@
 
 .c-summary_list {
     @media (max-width: $to-medium) {
-        margin-top: rem($unit/2);
+        margin-top: rem(math.div($unit, 2));
     }
 }
 

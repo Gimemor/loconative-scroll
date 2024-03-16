@@ -3,7 +3,7 @@ import gulpSass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import header from 'gulp-header';
 import merge from 'merge-stream';
-import nodeSass from 'node-sass';
+import nodeSass from 'sass';
 import paths from '../mconfig.json' with { type: "json" };
 import pkg from '../package.json' with { type: "json" };
 

@@ -8,6 +8,8 @@
 // @param  {Number} $base [$font-size] - The assumed base font size.
 // @return {Number} Scalable pixel value in EMs.
 //
+@use "sass:math";
+
 @function em($size, $base: $font-size) {
     @if (type-of($size) == number) {
         @if (unit($size) != "px") {
@@ -25,7 +27,7 @@
         @error "`#{$base}` needs to be a number.";
     }
 
-    @return ($size / $base) * 1em;
+    @return math.div($size, $base) * 1em;
 }
 
 //
@@ -52,7 +54,7 @@
         @error "`#{$base}` needs to be a number.";
     }
 
-    @return ($size / $base) * 1rem;
+    @return math.div($size, $base) * 1rem;
 }
 
 //
@@ -98,7 +100,7 @@
 @function important($flag: false) {
     @if ($flag == true) {
         @return !important;
-    } @elseif ($important == false) {
+    } @else if ($important == false) {
         @return null;
     } @else {
         @error "`#{$flag}` needs to be `true` or `false`."

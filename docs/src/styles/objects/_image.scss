@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .o-image_wrapper {
     position: relative;
     overflow: hidden;
@@ -10,7 +12,7 @@
         align-content: center;
         
         @media (max-width: $to-small) {
-            margin: rem($unit/2) 0;
+            margin: rem(math.div($unit, 2)) 0;
         }
     }
 }

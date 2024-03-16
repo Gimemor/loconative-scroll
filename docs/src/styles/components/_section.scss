@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .c-section {
     position: relative;
 
@@ -17,7 +19,7 @@
     z-index: 0;
 
     @media (min-width: $from-medium) {
-        padding-top: rem($unit * 2);
+        padding-top: rem(math.div($unit, 2));
 
         &.-padding {
             padding-top: 35vh;
@@ -25,7 +27,7 @@
     }
 
     @media (max-width: $to-medium) {
-        margin-bottom: rem($unit/2);
+        margin-bottom: rem(math.div($unit, 2));
     }
 
     &.-sticky {
