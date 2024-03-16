@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import paths from '../mconfig.json';
+import paths from '../mconfig.json' with { type: "json" };
 import error from './error.js';
 
 function copy() {

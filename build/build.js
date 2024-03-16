@@ -5,7 +5,8 @@ import cssnano from 'cssnano';
 import merge from 'merge-stream';
 import terser from 'gulp-terser-js';
 import htmlmin from 'gulp-htmlmin';
-import paths from '../mconfig.json';
+import paths from '../mconfig.json' with { type: "json" };
+
 
 function buildStyles() {
     const stylesfiles = [

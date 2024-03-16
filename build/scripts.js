@@ -3,8 +3,9 @@ import { rollup } from 'rollup';
 import resolve from 'rollup-plugin-node-resolve';
 import babel from 'rollup-plugin-babel';
 import common from 'rollup-plugin-commonjs';
-import paths from '../mconfig.json';
-import pkg from '../package.json';
+import paths from '../mconfig.json' with { type: "json" };
+import pkg from '../package.json' with { type: "json" };
+
 
 function scripts() {
     const files = [

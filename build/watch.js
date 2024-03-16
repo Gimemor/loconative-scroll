@@ -1,5 +1,6 @@
 import gulp from 'gulp';
-import paths from '../mconfig.json';
+import paths from '../mconfig.json' with { type: "json" };
+
 import styles from './styles.js';
 import scripts from './scripts.js';
 import svgs from './svgs.js';

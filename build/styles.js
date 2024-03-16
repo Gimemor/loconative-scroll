@@ -4,8 +4,9 @@ import autoprefixer from 'gulp-autoprefixer';
 import header from 'gulp-header';
 import merge from 'merge-stream';
 import nodeSass from 'node-sass';
-import paths from '../mconfig.json';
-import pkg from '../package.json';
+import paths from '../mconfig.json' with { type: "json" };
+import pkg from '../package.json' with { type: "json" };
+
 import error from './error.js';
 import { server } from './serve.js';
 

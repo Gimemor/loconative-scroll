@@ -1,5 +1,6 @@
 import browserSync from 'browser-sync';
-import paths from '../mconfig.json';
+import paths from '../mconfig.json' with { type: "json" };
+
 
 export const server = browserSync.create();
 
