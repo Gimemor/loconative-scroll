@@ -5,7 +5,9 @@
     "repository": "gimemor/loconative-scroll",
     "author": "Quentin Hocdé <info@quentinhocde.com> (https://quentinhocde.com)",
     "license": "MIT",
-    "exports": "./dist/loconative-scroll.js",
+    "exports": {
+        ".": "./dist/"
+    },
     "module": "./dist/loconative-scroll.esm.js",
     "type": "module",
     "scripts": {
