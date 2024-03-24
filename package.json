@@ -6,10 +6,13 @@
     "author": "Quentin Hocdé <info@quentinhocde.com> (https://quentinhocde.com)",
     "license": "MIT",
     "exports": {
-        "./*": ["./dist/*"]
+        "./*": [
+            "./dist/*"
+        ],
+        ".": "./dist/loconative-scroll.esm.js"
     },
-    "module": "./dist/loconative-scroll.js",
-    "main ": "./dist/loconative-scroll.",
+    "module": "./dist/loconative-scroll.esm.js",
+    "main ": "./dist/loconative-scroll.esm.js",
     "type": "module",
     "scripts": {
         "start": "gulp",

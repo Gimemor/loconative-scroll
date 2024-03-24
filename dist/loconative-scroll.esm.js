@@ -878,10 +878,11 @@ class Scroll extends Core {
     this.lenis.on('scroll', this.bindOnScroll);
 
     //get scroll value
-    this.lenis.on('scroll', _ref => {
-    } // console.log({ scroll, limit, velocity, direction, progress });
-    // console.log(this.lenis);
-    );
+    /*this.lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+        console.log({ scroll, limit, velocity, direction, progress });
+        console.log(this.lenis);
+    });*/
+
     this.raf(0);
     super.init();
   }
@@ -889,11 +890,12 @@ class Scroll extends Core {
     this.lenis.raf(time);
     this.rafInstance = requestAnimationFrame(() => this.raf(Date.now()));
   }
-  onScroll(_ref2) {
+  onScroll(_ref) {
     let {
       scroll,
       velocity
-    } = _ref2;
+    } = _ref;
+    console.log(scroll, velocity);
     if (scroll > this.instance.scroll[this.directionAxis]) {
       if (this.instance.direction !== 'down') {
         this.instance.direction = 'down';
@@ -1066,8 +1068,8 @@ class Scroll extends Core {
     });
   }
   updateElements() {
-    Object.entries(this.els).forEach(_ref3 => {
-      let [i, el] = _ref3;
+    Object.entries(this.els).forEach(_ref2 => {
+      let [i, el] = _ref2;
       const top = el.targetEl.getBoundingClientRect().top + this.instance.scroll.y;
       const bottom = top + el.targetEl.offsetHeight;
       const relativeOffset = this.getRelativeOffset(el.offset);
@@ -1099,8 +1101,8 @@ class Scroll extends Core {
       x: this.instance.scroll.x + this.windowMiddle.x,
       y: this.instance.scroll.y + this.windowMiddle.y
     };
-    Object.entries(this.parallaxElements).forEach(_ref4 => {
-      let [i, current] = _ref4;
+    Object.entries(this.parallaxElements).forEach(_ref3 => {
+      let [i, current] = _ref3;
       let transformDistance = false;
       if (isForced) {
         transformDistance = 0;

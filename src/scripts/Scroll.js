@@ -49,10 +49,10 @@ export default class extends Core {
         this.lenis.on('scroll', this.bindOnScroll);
 
         //get scroll value
-        this.lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-            // console.log({ scroll, limit, velocity, direction, progress });
-            // console.log(this.lenis);
-        });
+        /*this.lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+            console.log({ scroll, limit, velocity, direction, progress });
+            console.log(this.lenis);
+        });*/
 
         this.raf(0);
 
@@ -65,6 +65,7 @@ export default class extends Core {
     }
 
     onScroll({ scroll, velocity }) {
+        console.log(scroll, velocity);
         if (scroll > this.instance.scroll[this.directionAxis]) {
             if (this.instance.direction !== 'down') {
                 this.instance.direction = 'down';

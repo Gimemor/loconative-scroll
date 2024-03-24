@@ -1,2 +1,2 @@
-export { Main } from './scripts/Main';
+import { Main } from './scripts/Main';
 export default Main;
